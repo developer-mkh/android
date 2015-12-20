@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_update"
+        android:title="@string/menu_update"
+        android:orderInCategory="100"/>
+    <item android:id="@+id/menu_delete"
+        android:title="@string/menu_delete"
+        android:orderInCategory="200"/>
+    <item android:id="@+id/menu_add"
+        android:title="@string/menu_item"
+        android:orderInCategory="300" />
+    <item android:id="@+id/menu_training"
+        android:title="@string/menu_training"
+        android:orderInCategory="400" />
+    <item
+        android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        android:orderInCategory="500" />
+    <item
+        android:id="@+id/menu_help"
+        android:title="@string/help"
+        android:orderInCategory="600" />
+    <item
+        android:id="@+id/menu_search_on_action_bar"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/menu_search_window"
+        android:actionViewClass="android.widget.SearchView"
+        android:showAsAction="always"/>
+
+</menu>

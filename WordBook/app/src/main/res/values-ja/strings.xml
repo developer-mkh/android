@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">単語帳</string>
+    <string name="title_word_detail">単語詳細</string>
+    <string name="title_activity_word_add">単語登録</string>
+    <string name="title_activity_word_update">単語修正</string>
+    <string name="title_activity_training">単語カード</string>
+    <string name="title_activity_word_card_settings">設定</string>
+    <string name="word">単語</string>
+    <string name="category">分類</string>
+    <string name="meaning">意味</string>
+    <string name="training_target">単語カード</string>
+    <string name="other">その他</string>
+    <string name="add">登録</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">キャンセル</string>
+    <string name="kana">よみがな</string>
+    <string name="training_target_on">表示</string>
+    <string name="training_target_off">非表示</string>
+    <string name="full_byte_space">　</string>
+    <string name="update">更新</string>
+    <string name="inserted_date">登録日</string>
+    <string name="updated_date">最終更新日</string>
+    <string name="back_side">裏面へ</string>
+    <string name="next">次の単語へ</string>
+    <string name="restart">最初から</string>
+    <string name="end_of_word_card">終了</string>
+    <string name="word_card_count">LAP:</string>
+    <string name="word_card_empty">表示するものがありません。</string>
+    <string name="search_view_hint">単語</string>
+    <string name="search_result">検索結果</string>
+    <string name="no_search_result">検索結果がありません。</string>
+    <string name="history">履歴</string>
+    <string name="no_history">履歴がありません。</string>
+    <string name="choice_input_element">入力先選択</string>
+    <string name="word_card_remaining">残り%s秒</string>
+    <string name="help">ヘルプ</string>
+</resources>

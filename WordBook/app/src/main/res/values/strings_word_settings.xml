@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_word_card_category">Word Card</string>
+    <string name="pref_word_card_use_interval">Use the indication interval</string>
+    <string name="pref_word_card_interval">Indication interval</string>
+    <string name="pref_word_card_interval_summary">Time until the meaning is indicated　is %s second.</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_word_card_category">単語カード</string>
+    <string name="pref_word_card_use_interval">単語意味の自動表示</string>
+    <string name="pref_word_card_interval">表示間隔</string>
+    <string name="pref_word_card_interval_summary">意味を表示するまでの時間は、%s秒です。</string>
+</resources>

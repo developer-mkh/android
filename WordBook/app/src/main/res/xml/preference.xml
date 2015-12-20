@@ -1,0 +1,13 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_word_card_category">
+        <CheckBoxPreference
+            android:title="@string/pref_word_card_use_interval"
+            android:key="use_interval"/>
+        <jp.gr.java_conf.mkh.wordbook.preference.NumberPickerPreference
+            android:title="@string/pref_word_card_interval"
+            android:summary="@string/pref_word_card_interval_summary"
+            android:key="interval"
+            android:dependency="use_interval"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item">単語登録</string>
+    <string name="menu_update">修正</string>
+    <string name="menu_delete">削除</string>
+    <string name="menu_training">単語カード</string>
+    <string name="menu_search_window">単語・意味検索</string>
+    <string name="menu_settings">設定</string>
+</resources>

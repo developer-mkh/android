@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_update"
+        android:title="@string/menu_update"
+        android:orderInCategory="100"/>
+    <item android:id="@+id/menu_delete"
+        android:title="@string/menu_delete"
+        android:orderInCategory="200"/>
+    <item
+        android:id="@+id/menu_search_on_action_bar"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/menu_search_window"
+        android:actionViewClass="android.widget.SearchView"
+        android:showAsAction="always"/>
+</menu>

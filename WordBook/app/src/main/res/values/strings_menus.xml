@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item">Add word</string>
+    <string name="menu_update">Update</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_training">Word Card</string>
+    <string name="menu_search_window">Word/Meaning Search</string>
+    <string name="menu_settings">Settings</string>
+</resources>

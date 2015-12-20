@@ -1,0 +1,13 @@
+<h1>Summary</h1>
+It is an application that combines function of the words book and the word card.<br/>
+In the word card mode, the word card can automatically to turn to the page of meaning from the page of a word.
+Time until the turn is can be set in increments of 1 second to 1 second to 60 seconds.
+Settings , please go from the menu settings.
+<h1>version</h1>
+%VERSION%
+<h1>copyright and exemption from responsibility</h1>
+developer.mkh holds all the copyrights of this software.<br/>
+An author does not shoulder total responsibility for any kind of damage by using this software. Please use on own responsibility.
+
+
+
