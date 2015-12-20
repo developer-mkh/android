@@ -1,0 +1,3 @@
+<resources>
+    <usb-accessory manufacturer="developer.mkh" model="DHT" version="1.0" />
+</resources>
