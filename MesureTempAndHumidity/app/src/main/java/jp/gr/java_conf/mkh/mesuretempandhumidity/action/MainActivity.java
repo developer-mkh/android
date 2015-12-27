@@ -2,20 +2,25 @@ package jp.gr.java_conf.mkh.mesuretempandhumidity.action;
 
 import android.app.AlertDialog;
 import android.app.PendingIntent;
+import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.hardware.usb.UsbAccessory;
 import android.hardware.usb.UsbManager;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.os.ParcelFileDescriptor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,15 +31,16 @@ import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import jp.gr.java_conf.mkh.mesuretempandhumidity.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Handler.Callback {
 
     // USBアクセサリ関連
     private UsbManager usbManager;
@@ -48,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
     // ファイルIO関連
     private ParcelFileDescriptor fileDescriptor;
-    private OutputStream outputStream;
     private FileInputStream inputStream;
 
     // 画面要素
@@ -68,12 +73,19 @@ public class MainActivity extends AppCompatActivity {
                     "EPOC, TEMP, HUMIDITY)";
     private DatabaseHelper dbHelper;
 
+    // データ書き出し関連
+    private Thread thread;
+    private Handler handler;
+    private ProgressDialog progressDialog;
+    private BufferedWriter saveWriter = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         dbHelper = new DatabaseHelper(getApplicationContext());
+        handler = new Handler(MainActivity.this);
 
         ((Button) findViewById(R.id.button2)).setText(R.string.button_output);
         textView = (TextView) findViewById(R.id.textView);
@@ -101,46 +113,82 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ((Button) findViewById(R.id.button2)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                isReadable = false;
-                button.setText(R.string.button_start);
-                Cursor cursor = dbHelper.query(TABLE_NAME, new String[]{"EPOC", "TEMP", "HUMIDITY"}, null, null, "EPOC");
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+                                                          @Override
+                                                          public void onClick(View v) {
+                                                              findViewById(R.id.button2).setEnabled(false);
+                                                              Runnable runnable = new Runnable() {
+                                                                  @Override
+                                                                  public void run() {
 
-                FileOutputStream fileOutputStream;
-                BufferedWriter saveWriter = null;
-                try {
-                    String path = Environment.getExternalStorageDirectory().getPath() + "/data.csv";
-                    File outFile = new File(path);
-                    fileOutputStream = new FileOutputStream(outFile, false);
-                    saveWriter = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
-                } catch (FileNotFoundException e) {
-                    new AlertDialog.Builder(MainActivity.this).setMessage(e.getMessage()).setTitle("").show();
-                }
 
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss ");
-                String str;
-                textView.setText("");
-                while (cursor.moveToNext()) {
-                    str = sdf.format(cursor.getLong(0)) + ", " + cursor.getString(1) + ", " + cursor.getString(2) + "\n";
-                    textView.setText(textView.getText() + str);
-                    try {
-                        saveWriter.write(str);
-                    } catch (IOException e) {
-                        new AlertDialog.Builder(MainActivity.this).setMessage(e.getMessage()).setTitle("").show();
-                    }
-                }
-                try {
-                    saveWriter.flush();
-                    saveWriter.close();
-                } catch (IOException e) {
-                    new AlertDialog.Builder(MainActivity.this).setMessage(e.getMessage()).setTitle("").show();
-                } finally {
-                    cursor.close();
-                }
-            }
-        });
+
+                                                                      try {
+                                                                          String path = Environment.getExternalStorageDirectory().getPath() + "/data_" + new SimpleDateFormat("yyyy_MM_dd__HH_mm_ss", Locale.JAPAN).format(new Date()) + ".csv";
+                                                                          FileOutputStream fos = new FileOutputStream(path);
+                                                                          OutputStreamWriter writer = new OutputStreamWriter(fos, "UTF-8");
+                                                                          saveWriter = new BufferedWriter(writer);
+                                                                      } catch (IOException e) {
+                                                                          Log.d("FILE_ERROR", e.toString());
+                                                                          handler.sendEmptyMessage(1);
+                                                                          return;
+                                                                      }
+
+                                                                      Cursor cursor = dbHelper.query(TABLE_NAME, new String[]{"EPOC", "TEMP", "HUMIDITY"}, null, null, "EPOC");
+                                                                      SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.JAPAN);
+                                                                      String str;
+                                                                      while (cursor.moveToNext()) {
+                                                                          str = sdf.format(cursor.getLong(0)) + ", " + cursor.getString(1) + ", " + cursor.getString(2) + "\r\n";
+                                                                          try {
+                                                                              saveWriter.write(str);
+                                                                              handler.sendEmptyMessage(0);
+                                                                          } catch (IOException e) {
+                                                                              Log.d("FILE_ERROR", e.toString());
+                                                                          }
+                                                                      }
+                                                                      try {
+                                                                          saveWriter.flush();
+                                                                          saveWriter.close();
+                                                                      } catch (IOException e) {
+                                                                          new AlertDialog.Builder(MainActivity.this).setMessage(e.getMessage()).setTitle("").show();
+                                                                      } finally {
+                                                                          saveWriter = null;
+                                                                          cursor.close();
+                                                                          handler.sendEmptyMessage(1);
+                                                                          thread = null;
+                                                                      }
+                                                                  }
+                                                              };
+
+                                                              progressDialog = new ProgressDialog(MainActivity.this);
+                                                              progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                                                              progressDialog.setCancelable(false);
+                                                              progressDialog.setProgress(0);
+                                                              progressDialog.setMax((int) dbHelper.getCount());
+                                                              progressDialog.show();
+                                                              new Thread(runnable).start();
+                                                          }
+                                                      });
+
+
+    }
+
+    @Override
+    public boolean handleMessage(Message msg) {
+        if (progressDialog == null) {
+            return false;
+        }
+        switch (msg.what) {
+            case 0:
+                progressDialog.incrementProgressBy(1);
+                return true;
+            case 1:
+                progressDialog.dismiss();
+                findViewById(R.id.button2).setEnabled(true);
+                return true;
+            default:
+                return false;
+        }
     }
 
     @Override
@@ -167,6 +215,15 @@ public class MainActivity extends AppCompatActivity {
     public void onPause() {
         super.onPause();
 
+        if (saveWriter != null) {
+            try {
+                saveWriter.flush();
+            } catch (IOException e) {
+                new AlertDialog.Builder(MainActivity.this).setMessage(e.getMessage()).setTitle("").show();
+            }
+        }
+        handler.sendEmptyMessage(1);
+        thread = null;
         closeAccessory();
     }
 
@@ -185,7 +242,6 @@ public class MainActivity extends AppCompatActivity {
         fileDescriptor = usbManager.openAccessory(accessory);
         if (fileDescriptor != null) {
             FileDescriptor fd = fileDescriptor.getFileDescriptor();
-            outputStream = new FileOutputStream(fd);
             inputStream = new FileInputStream(fd);
             button.setEnabled(true);
         }
@@ -203,7 +259,6 @@ public class MainActivity extends AppCompatActivity {
             new AlertDialog.Builder(MainActivity.this).setMessage(e.getMessage()).setTitle("").show();
         } finally {
             inputStream = null;
-            outputStream = null;
             fileDescriptor = null;
             usbAccessory = null;
         }
@@ -258,8 +313,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         textView = (TextView) findViewById(R.id.textView);
-                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss ");
-                        textView.setText(textView.getText() + sdf.format(epoc) + data + "\n");
+                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss ", Locale.JAPAN);
+                        String str = textView.getText() + sdf.format(epoc) + data + "\n";
+                        textView.setText(str);
                     }
                 });
             }
@@ -329,5 +385,13 @@ public class MainActivity extends AppCompatActivity {
             return ret;
         }
 
+        /**
+         * DBの総件数を返す。
+         * @return 総件数
+         */
+        public long getCount() {
+            SQLiteDatabase db = getWritableDatabase();
+            return DatabaseUtils.queryNumEntries(db, TABLE_NAME);
+        }
     }
 }
