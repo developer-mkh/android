@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SimpleAlarm</string>
+    <string name="btn_stop_name">Stop alarm</string>
+    <string name="btn_stop_all_name">Stop alarm and disable alarms belongs to same group too</string>
+    <string name="btn_ok_name">OK</string>
+    <string name="btn_make_alarm_name">Create/change alarm</string>
+    <string name="btn_cancel_name">Cancel</string>
+    <string name="btn_delete_name">Delete</string>
+    <string name="btn_set_holiday">set/reset holiday</string>
+    <string name="btn_set_name">Set</string>
+    <string name="btn_select_sound">sound</string>
+    <string name="btn_play_name">Play</string>
+    <string name="btn_call_main_fragment">Show mainWindow</string>
+	<string name="btn_close">close</string>
+	<string name="btn_close_never">close(never show)</string>
+	<string name="btn_add_name">Add</string>
+	<string name="btn_change_name">Change</string>
+	<string name="btn_delete_group_name">Delete</string>
+    <string name="btn_alarm_on">Alarm is on</string>
+    <string name="btn_alarm_off">Alarm is off</string>
+    <string name="text_view_time">Time:</string>
+    <string name="text_view_on_condition">Condition:</string>
+    <string name="text_view_sound">Sound:</string>
+    <string name="text_view_vibrate">Vibration:</string>
+    <string name="text_view_force_play">Force play sound:</string>
+    <string name="text_view_group">Group:</string>
+    <string name="dialog_select_condition">Please check alarm armed condition</string>
+
+    <string-array name="bundle_sound">
+        <item>sound1</item>
+        <item>sound2</item>
+        <item>sound3</item>
+        <item>sound4</item>
+        <item>sound5</item>
+        <item>sound6</item>
+        <item>sound7</item>
+        <item>sound8</item>
+    </string-array>
+    <string name="seek_bar_name">Vol.</string>
+
+
+
+
+</resources>

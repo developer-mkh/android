@@ -1,0 +1,12 @@
+<h1>Summary</h1>
+This is simple alarm application.
+
+<h1>How to use your own alarm sound.</h1>
+Please place the alarm sound file to the following location.<br/>
+%INPUT_PATH%
+<h1>version</h1>
+%VERSION%
+<h1>copyright and exemption from responsibility</h1>
+developer.mkh holds all the copyrights of this software.
+Any damage caused by having used this software does not take the responsibility for all author.
+Please use it on self responsibility.

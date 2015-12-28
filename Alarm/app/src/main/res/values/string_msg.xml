@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_err">Error</string>
+    <string name="title_select_sound_place">Please select…</string>
+    <string name="title_info">Information</string>
+    <string name="title_select_sound">Please select…</string>
+    <string name="title_select_group">Select group</string>
+    <string name="err_msg_not_select">Please select alarm repeat condition.</string>
+    <string name="err_msg_duplicate">The same alerm is already setted.</string>
+    <string name="err_msg_empty">A group name is empty.</string>
+    <string name="err_msg_group_duplicate">There is a same group.</string>
+    <string name="err_msg_there_is_no_group">There is no such group.</string>
+    <string name="err_msg_there_is_belong_alarm">There is a alarm belong to this group.</string>
+    <string name="msg_vibration_enable">vibration</string>
+    <string name="msg_force_sound">Force play sound</string>
+    <string name="msg_alarm_enble">On</string>
+    <string name="msg_alarm_disanble">Off</string>
+    <string name="msg_group_added">Group added.</string>
+    <string name="msg_group_changed">Group changed.</string>
+    <string name="msg_group_deleted">Group deleted.</string>
+    <string name="info_msg_thereis_not_alarm">First, please long tap or push menu key or button, and then select "Set alarm". Second, please  set up an alarm.</string>
+    <string-array name="select_sound_msg">
+        <item>Bundle</item>
+        <item>External</item>
+    </string-array>
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_err">エラー</string>
+    <string name="title_select_sound_place">アラーム音を選択してください。</string>
+    <string name="title_info">情報</string>
+    <string name="title_select_sound">アラーム音の選択</string>
+    <string name="title_select_group">グループを選択</string>
+    <string name="err_msg_not_select">繰り返し条件を選択してください。</string>
+    <string name="err_msg_duplicate">この時刻は既に登録されています。</string>
+    <string name="err_msg_group_duplicate">このグループ名は既に登録されています。</string>
+    <string name="err_msg_there_is_no_group">指定のグループ名がありません。</string>
+    <string name="err_msg_there_is_belong_alarm">このグループに属しているアラームが存在します。</string>
+    <string name="err_msg_empty">グループ名が入力されていません。</string>
+    <string name="msg_vibration_enable">バイブ</string>
+    <string name="msg_force_sound">アラーム優先</string>
+    <string name="msg_alarm_enble">On</string>
+    <string name="msg_alarm_disanble">Off</string>
+    <string name="msg_group_added">グループを追加しました。</string>
+    <string name="msg_group_changed">グループ名を変更しました。</string>
+    <string name="msg_group_deleted">グループを削除しました。</string>
+    <string name="info_msg_thereis_not_alarm">ロングタップ、メニューキーまたはボタンを押してアラーム設定を選択し、アラームを設定してください。</string>
+    <string-array name="select_sound_msg">
+        <item>付属アラーム音</item>
+        <item>メモリカードのアラーム音</item>
+    </string-array>
+
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="set">アラーム作成</string>
+    <string name="delete">アラーム削除</string>
+    <string name="holiday">休日設定</string>
+    <string name="about_this">本アプリについて</string>
+    <string name="stop">アラーム停止</string>
+    <string name="edit">アラーム編集</string>
+    <string name="group">グループ表示</string>
+    <string name="group_edit">グループ編集</string>
+    <string name="change_group">別のグループへ</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sun">日</string>
+    <string name="mon">月</string>
+    <string name="tue">火</string>
+    <string name="wed">水</string>
+    <string name="thu">木</string>
+    <string name="fri">金</string>
+    <string name="sat">土</string>
+    <string name="everyday">毎日</string>
+    <string name="weekday">平日のみ</string>
+    <string name="s">日</string>
+    <string name="m">月</string>
+    <string name="t">火</string>
+    <string name="w">水</string>
+    <string name="th">木</string>
+    <string name="f">金</string>
+    <string name="st">土</string>
+
+</resources>

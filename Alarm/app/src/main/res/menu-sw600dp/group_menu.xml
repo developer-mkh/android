@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/item10" android:icon="@android:drawable/ic_menu_edit" android:title="@string/group_edit"></item>
+    <item android:id="@+id/item3" android:title="@string/holiday" android:icon="@android:drawable/ic_menu_my_calendar"></item>
+    <item android:id="@+id/item5" android:title="@string/stop" android:icon="@android:drawable/ic_menu_close_clear_cancel"></item>
+    <item android:id="@+id/item4" android:icon="@android:drawable/ic_menu_help" android:title="@string/about_this"></item>
+</menu>

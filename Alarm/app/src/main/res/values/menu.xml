@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="set">Create alarm</string>
+    <string name="delete">Delete alarm</string>
+    <string name="holiday">Set holiday</string>
+    <string name="about_this">About this</string>
+    <string name="stop">Stop alarm</string>
+    <string name ="edit">Edit alarm</string>
+    <string name="group">Group view</string>
+    <string name="group_edit">Edit groups</string>
+    <string name="change_group">Change group</string>
+</resources>
