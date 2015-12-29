@@ -450,7 +450,7 @@ public class Util {
     /**
      * 与えられた日が休日かどうか判定する。
      *
-     * @param contentResolverコンテンツリゾルバ
+     * @param contentResolver コンテンツリゾルバ
      * @param date
      *            判定対象年月日
      * @return 休日のときtrue

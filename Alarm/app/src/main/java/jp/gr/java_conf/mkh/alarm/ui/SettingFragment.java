@@ -40,6 +40,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -646,15 +647,17 @@ public class SettingFragment extends Fragment {
                 ret = new TimePickerDialog(getActivity(), sf.new TimeSet(), hour, min, true);
                 break;
             case SELECT_CONDITION:
-                ListItem[] choiceItem = { new ListItem(false, getResources().getString(R.string.sun), true, true),
+                ListItem[] choiceItem = {
+                        new ListItem(false, getResources().getString(R.string.sun), true, true),
                         new ListItem(false, getResources().getString(R.string.mon), true, true),
                         new ListItem(false, getResources().getString(R.string.tue), true, true),
                         new ListItem(false, getResources().getString(R.string.wed), true, true),
                         new ListItem(false, getResources().getString(R.string.thu), true, true),
                         new ListItem(false, getResources().getString(R.string.fri), true, true),
                         new ListItem(false, getResources().getString(R.string.sat), true, true),
-                        new ListItem(false, getResources().getString(R.string.everyday), true, true),
-                        new ListItem(false, getResources().getString(R.string.weekday), true, true) };
+                        //new ListItem(false, getResources().getString(R.string.everyday), true, true),
+                        //new ListItem(false, getResources().getString(R.string.weekday), true, true)
+                };
                 code = new ArrayList<Alarm.EnableCode>();
                 for (EnableCode item : sf.code) {
                     code.add(item);
@@ -885,6 +888,7 @@ public class SettingFragment extends Fragment {
                     code.clear();
                 } else {
                     item.setChecked(!item.isChecked());
+                    ((CheckBox) arg1.findViewById(R.id.checkBox8)).setChecked(item.isChecked());
                 }
 
                 if (item.isChecked()) {
@@ -913,6 +917,9 @@ public class SettingFragment extends Fragment {
                         item.setChecked(false);
                         item.setEnableCheckBox(true);
                         item.setEnableTextView(true);
+                        ((CheckBox) ((LinearLayout) parent.getChildAt(i)).getChildAt(0)).setChecked(false);
+                        ((LinearLayout) parent.getChildAt(i)).getChildAt(0).setEnabled(true);
+                        ((LinearLayout) parent.getChildAt(i)).getChildAt(1).setEnabled(true);
                     }
                 } else {
                     for (int i = 0; i < parent.getCount(); i++) {
@@ -921,10 +928,14 @@ public class SettingFragment extends Fragment {
                             item.setChecked(false);
                             item.setEnableCheckBox(false);
                             item.setEnableTextView(false);
+                            ((CheckBox) ((LinearLayout) parent.getChildAt(i)).getChildAt(0)).setChecked(false);
+                            ((LinearLayout) parent.getChildAt(i)).getChildAt(0).setEnabled(false);
+                            ((LinearLayout) parent.getChildAt(i)).getChildAt(1).setEnabled(false);
                         } else {
                             item.setChecked(true);
                             item.setEnableCheckBox(true);
                             item.setEnableTextView(true);
+                            ((CheckBox) ((LinearLayout) parent.getChildAt(i)).getChildAt(0)).setChecked(true);
                         }
                     }
                 }

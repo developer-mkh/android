@@ -20,6 +20,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,7 +34,7 @@ import android.widget.ToggleButton;
  * @author mkh
  *
  */
-public class AlarmActivity extends FragmentActivity implements ChangeAlarmEnable {
+public class AlarmActivity extends AppCompatActivity implements ChangeAlarmEnable {
 
     public static final String DB_FILE = "alart_file.db";
 
