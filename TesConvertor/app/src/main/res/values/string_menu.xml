@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_title_1">Setting</string>
+    <string name="menu_title_2">Help</string><string name="menu_is_write_sametime">Conversion and a file output are performed continuously.</string>
+    <string name="menu_is_use_hardware_accelaration">Use hardware accelaration</string>
+    <string name="menu_is_auto_input_output_file_name">Auto fill output file name when select input file</string>
+</resources>

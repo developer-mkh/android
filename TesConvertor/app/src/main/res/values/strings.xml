@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TES Convertor</string><string name="app_desctiption">Application which changes the TES format of Wintec </string>
+    <string name="btn_text_ok">OK</string><string name="btn_text_convert">Conversion</string><string name="btn_text_file">select</string><string name="btn_text_save">Outputs to a file. </string><string name="btn_text_yes">Yes</string><string name="btn_text_no">No</string><string name="dialog_title_err">Error</string><string name="dialog_title_input_file">Input file</string>
+    <string name="dialog_title_output_file">Output file</string><string name="dialog_title_info">Information</string><string name="err_msg_inputFileNotFound">An input file is not found.</string>
+    <string name="err_msg_outputFileNotDefined">The output file is not specified.</string><string name="err_msg_IOException">I/O error was occurred.</string><string name="err_msg_ParserConfigurationException">Parse went wrong.</string><string name="err_msg_TransformerException">Conversion to XML went wrong.</string>
+    <string name="err_msg_notConverted">The conversion process is not performed.</string><string name="err_msg_fileAlreadyExist">A file exists. Does it overwrite?</string><string name="err_msg_inputFileNotDefined">The input file is not specified.</string><string name="err_msg_sdcard_not_found">SD card is not found. SD card is indispensable. \nOperation of this application cannot be guaranteed.</string><string name="err_msg_err">The error occurred.</string><string name="info_msg_nofiles">There is no file.</string><string name="text_text_infile">Input file(TES)</string>
+    <string name="text_text_outfile">Output file(GPX)</string>
+
+
+
+
+
+
+
+
+
+
+
+    <string name="editText_hint_infile">Please input the TES file name to change.</string>
+    <string name="editText_hint_outfile">Please input the GPX file name to output.</string>
+
+    <string name="dialog_msg_inConvert">It is under conversion.</string>
+    <string name="dialog_msg_inSave">It is under preservation.</string>
+    <string name="map_key">0ZakWtrWXMe5ILeHz-ZJLs7BvtHOUW4BJQO16sQ</string>
+    <string name="toggleBtn_off">Map Off</string>
+    <string name="toggleBtn_on">Map On</string>
+    <string name="input_file_dir">Input file directory:</string>
+    <string name="output_file_dir">output file directory:</string>
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

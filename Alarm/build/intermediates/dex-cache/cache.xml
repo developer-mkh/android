@@ -1,3 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="E:\android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\home\Document\prog\android\Alarm\app\build\intermediates\pre-dexed\release\support-annotations-23.1.1_99e36c654aaf62bea41d5930328966ad86791787.jar" />
+    </item>
+    <item
+        jar="D:\home\Document\prog\android\Alarm\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="D:\home\Document\prog\android\Alarm\app\build\intermediates\pre-dexed\release\internal_impl-23.1.1_de4b9d30f3f4edd139daa6640a167342d758121e.jar" />
+    </item>
+    <item
+        jar="D:\home\Document\prog\android\Alarm\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="D:\home\Document\prog\android\Alarm\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.1.1_b99c3e121226913430c5a4deac6ae74945a7c815.jar" />
+    </item>
+    <item
+        jar="D:\home\Document\prog\android\Alarm\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="D:\home\Document\prog\android\Alarm\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.1.1_23746801de44dcf2c0983081f7e8d222e9078c93.jar" />
+    </item>
+
+</items>

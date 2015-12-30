@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.gr.java_conf.mkh.tesConvertor2"
+    android:installLocation="auto"
+    android:versionCode="4"
+    android:versionName="0.9.2" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="13" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:debuggable="false"
+        android:description="@string/app_desctiption"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true" >
+        <activity
+            android:name="jp.gr.java_conf.mkh.tesConvertor2.TesConvertorActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="jp.gr.java_conf.mkh.tesConvertor2.menu.SettingActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="jp.gr.java_conf.mkh.tesConvertor2.menu.HelpActivity"
+            android:label="@string/app_name" />
+
+        <uses-library android:name="com.google.android.maps" />
+    </application>
+
+</manifest>

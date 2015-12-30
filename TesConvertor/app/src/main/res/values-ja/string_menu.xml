@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_title_1">設定</string>
+    <string name="menu_title_2">ヘルプ</string><string name="menu_is_write_sametime">変換とファイル出力を連続して行う。</string>
+    <string name="menu_is_use_hardware_accelaration">ハードウェアアクセラレーションを使用する。</string>
+    <string name="menu_is_auto_input_output_file_name">入力ファイル選択後、自動的に出力ファイルネームを設定する。</string>
+</resources>

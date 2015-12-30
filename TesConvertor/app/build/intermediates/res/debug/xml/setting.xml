@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/menu_title_1">
+
+        <CheckBoxPreference android:title="@string/menu_is_write_sametime"
+            android:key="check1">
+        </CheckBoxPreference>
+        <CheckBoxPreference android:title="@string/menu_is_use_hardware_accelaration" android:key="check2"/>
+        <CheckBoxPreference android:title="@string/menu_is_auto_input_output_file_name" android:key="check3"/>
+    </PreferenceCategory>
+</PreferenceScreen><!-- From: file:/D:/home/Document/prog/android/TesConvertor/app/src/main/res/xml/setting.xml -->

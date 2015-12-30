@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\home\\Document\\prog\\android\\TesConvertor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "D:\\home\\Document\\prog\\android\\TesConvertor\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "D:\\home\\Document\\prog\\android\\TesConvertor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\help.xml",
+        "source": "D:\\home\\Document\\prog\\android\\TesConvertor\\app\\src\\main\\res\\layout\\help.xml"
+    },
+    {
+        "merged": "D:\\home\\Document\\prog\\android\\TesConvertor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\text_view.xml",
+        "source": "D:\\home\\Document\\prog\\android\\TesConvertor\\app\\src\\main\\res\\layout\\text_view.xml"
+    },
+    {
+        "merged": "D:\\home\\Document\\prog\\android\\TesConvertor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\map_view.xml",
+        "source": "D:\\home\\Document\\prog\\android\\TesConvertor\\app\\src\\main\\res\\layout\\map_view.xml"
+    }
+]

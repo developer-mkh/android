@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_desctiption">Wintec社のTESフォーマットを変換するアプリケーション</string>
+    <string name="app_name">TES Convertor</string>
+    <string name="btn_text_convert">変換</string>
+    <string name="btn_text_file">選択</string>
+    <string name="btn_text_no">いいえ</string>
+    <string name="btn_text_ok">OK</string>
+    <string name="btn_text_save">ファイルに出力</string>
+    <string name="btn_text_yes">はい</string>
+    <string name="dialog_msg_inConvert">変換中です。</string>
+    <string name="dialog_msg_inSave">保存中です。</string>
+    <string name="dialog_title_err">エラー</string>
+    <string name="dialog_title_info">情報</string>
+    <string name="dialog_title_input_file">入力ファイル</string>
+    <string name="dialog_title_output_file">出力ファイル</string>
+    <string name="editText_hint_infile">変換するTESファイル名を入力してください。</string>
+    <string name="editText_hint_outfile">出力するGPXファイル名を入力してください。</string>
+    <string name="err_msg_IOException">入出力エラーが発生しました。</string>
+    <string name="err_msg_ParserConfigurationException">パースに失敗しました。</string>
+    <string name="err_msg_TransformerException">XMLへの変換に失敗しました。</string>
+    <string name="err_msg_err">エラーが発生しました。</string>
+    <string name="err_msg_fileAlreadyExist">ファイルが存在します。上書きしますか。</string>
+    <string name="err_msg_inputFileNotDefined">入力ファイルが指定されていません。</string>
+    <string name="err_msg_inputFileNotFound">入力ファイルが見つかりません。</string>
+    <string name="err_msg_notConverted">変換処理が行われていません。</string>
+    <string name="err_msg_outputFileNotDefined">出力ファイルが指定されていません。</string>
+    <string name="err_msg_sdcard_not_found">SDカードが見つかりません。SDカードは必須です。\n本アプリの動作は保証できません。</string>
+    <string name="info_msg_nofiles">ファイルがありません。</string>
+    <string name="input_file_dir">入力ファイルディレクトリ:</string>
+    <string name="map_key">0ZakWtrWXMe5ILeHz-ZJLs7BvtHOUW4BJQO16sQ</string>
+    <string name="menu_is_auto_input_output_file_name">入力ファイル選択後、自動的に出力ファイルネームを設定する。</string>
+    <string name="menu_is_use_hardware_accelaration">ハードウェアアクセラレーションを使用する。</string>
+    <string name="menu_is_write_sametime">変換とファイル出力を連続して行う。</string>
+    <string name="menu_title_1">設定</string>
+    <string name="menu_title_2">ヘルプ</string>
+    <string name="output_file_dir">出力ファイルディレクトリ:</string>
+    <string name="text_text_infile">入力ファイル(TES)</string>
+    <string name="text_text_outfile">出力ファイル(GPX)</string>
+    <string name="toggleBtn_off">地図表示OFF</string>
+    <string name="toggleBtn_on">地図表示ON</string>
+</resources>

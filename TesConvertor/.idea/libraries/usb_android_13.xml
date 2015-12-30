@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="usb-android-13">
+    <CLASSES>
+      <root url="jar://E:/android/android-sdk/add-ons/addon-google_apis-google-13/libs/usb.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

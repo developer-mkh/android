@@ -1,0 +1,16 @@
+<h1>Summary</h1>
+Read the TES format file, which is the internal storage format of the GPS log data logger manufactured by Wintec, view of the trajectory, done in the form of export of GPX.
+
+<h1>input file</h1>
+Please place the input file to the following location.<br/>
+%INPUT_PATH%
+<h1>output-file</h1>
+The output file is output in the following locations.<br/>
+%OUTPUT_PATH%
+<h1>version</h1>
+%VERSION%
+<h1>copyright and exemption from responsibility</h1>
+developer.mkh holds all the copyrights of this software.
+Responsibility for all [ damage / caused by having used the accuracy and this software of the GPX file changed with this software / what kind of / author ] is not taken.
+Please use it by Kami of self responsibility.
+
