@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Vibration on calling</string>
+    <string name="button_label_apply">適用</string>
+    <string name="label_sleep">スリープ時間:</string>
+    <string name="label_timing">振動時間パターン:</string>
+    <string name="label_amplitude">振動on/offパターン:</string>
+    <string name="message_timings">振動時間パターンは半角数字と半角カンマのみ入力可能です。</string>
+    <string name="message_amplitude">振動on/offパターンは半角数字と半角カンマのみ入力可能です。</string>
+    <string name="message_number_not_match">振動時間パターンと振動on/offパターンの要素数が異なります。</string>
+    <string name="message_number_above_one">振動on/offパターンは0か1のみ入力可能です。</string>
+    <string name="message_instruction_timing">振動時間パターン:ミリ秒</string>
+    <string name="message_instruction_amplitude">振動on/offパターン:0:振動しない、1:振動する</string>
+    <string name="message_applied">適用しました。</string>
+    <string name="default_sleep_time">3000</string>
+    <string name="default_timings">1000,1000</string>
+    <string name="default_amplitude">1,0</string>
+    <string name="notificatio_channel_id">jp.gr.java_conf.mkh.voc_service</string>
+</resources>
