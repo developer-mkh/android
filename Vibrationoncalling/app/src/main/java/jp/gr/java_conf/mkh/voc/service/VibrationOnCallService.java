@@ -57,7 +57,7 @@ public class VibrationOnCallService extends IntentService {
         NotificationChannel channel = new NotificationChannel(getString(R.string.notificatio_channel_id), "Vibration on calling service", NotificationManager.IMPORTANCE_LOW);
         notificationManager.createNotificationChannel(channel);
         Notification notification = new Notification.Builder(getApplicationContext(), getString(R.string.notificatio_channel_id))
-                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setSmallIcon(R.mipmap.ic_launcher_foreground)
                 .setContentIntent(pendingIntent)
                 .build();
 
