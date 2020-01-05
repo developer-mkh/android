@@ -19,15 +19,23 @@ import jp.gr.java_conf.mkh.voc.preferences.Preferences;
 import jp.gr.java_conf.mkh.voc.receiver.CallingReceiver;
 import jp.gr.java_conf.mkh.voc.listener.MyPhoneStateListener;
 
-public class StartService extends IntentService {
+/**
+ * メインサービス。
+ * @since 2020/01/03
+ * @author developer.mkh@gmail.com
+ */
+public class VibrationOnCallService extends IntentService {
 
     // ブロードキャストレシーバー
     CallingReceiver receiver;
     // 着信状況が変化した際の処理を行うリスナー
     private MyPhoneStateListener phoneStateListener;
 
-    public StartService() {
-        super("StartService");
+    /**
+     * コンストラクタ
+     */
+    public VibrationOnCallService() {
+        super("VibrationOnCallService");
     }
 
     @Override

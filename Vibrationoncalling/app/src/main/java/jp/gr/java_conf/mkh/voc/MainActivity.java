@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 import jp.gr.java_conf.mkh.voc.preferences.Preferences;
 import jp.gr.java_conf.mkh.voc.listener.MyPhoneStateListener;
-import jp.gr.java_conf.mkh.voc.service.StartService;
+import jp.gr.java_conf.mkh.voc.service.VibrationOnCallService;
 
 /**
  * メインアクティビティ。
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button1).setOnClickListener(view -> {
             if (applyListener()) {
                 ((TextView) findViewById(R.id.textViewErr)).setText(R.string.message_applied);
-                Intent i = new Intent(getApplicationContext(), StartService.class);
+                Intent i = new Intent(getApplicationContext(), VibrationOnCallService.class);
                 stopService(i);
                 startForegroundService(i);
             }

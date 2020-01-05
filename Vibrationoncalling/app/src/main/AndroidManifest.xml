@@ -32,9 +32,8 @@
             </intent-filter>
         </receiver>
         <service
-            android:name=".service.StartService"
+            android:name=".service.VibrationOnCallService"
             android:directBootAware="true">
-
         </service>
     </application>
 
