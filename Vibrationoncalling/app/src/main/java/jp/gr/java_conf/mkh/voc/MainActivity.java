@@ -16,8 +16,8 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
-import jp.gr.java_conf.mkh.voc.preferences.Preferences;
 import jp.gr.java_conf.mkh.voc.listener.MyPhoneStateListener;
+import jp.gr.java_conf.mkh.voc.preferences.Preferences;
 import jp.gr.java_conf.mkh.voc.service.VibrationOnCallService;
 
 /**
@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         // 着信状況とバイブレーションへと起動完了通知のアクセス許可
         ActivityCompat.requestPermissions(this,
                 new String[]{
-                        Manifest.permission.READ_PHONE_STATE,
                         Manifest.permission.VIBRATE,
                         Manifest.permission.RECEIVE_BOOT_COMPLETED},
                 1);

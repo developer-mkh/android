@@ -8,16 +8,14 @@ import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Vibrator;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 
 import jp.gr.java_conf.mkh.voc.MainActivity;
 import jp.gr.java_conf.mkh.voc.R;
-import jp.gr.java_conf.mkh.voc.preferences.Preferences;
-import jp.gr.java_conf.mkh.voc.receiver.CallingReceiver;
 import jp.gr.java_conf.mkh.voc.listener.MyPhoneStateListener;
+import jp.gr.java_conf.mkh.voc.preferences.Preferences;
 
 /**
  * メインサービス。
@@ -26,8 +24,6 @@ import jp.gr.java_conf.mkh.voc.listener.MyPhoneStateListener;
  */
 public class VibrationOnCallService extends IntentService {
 
-    // ブロードキャストレシーバー
-    CallingReceiver receiver;
     // 着信状況が変化した際の処理を行うリスナー
     private MyPhoneStateListener phoneStateListener;
 
@@ -74,12 +70,6 @@ public class VibrationOnCallService extends IntentService {
     public void onCreate() {
         super.onCreate();
 
-        receiver = new CallingReceiver();
-        // ブロードキャストレシーバーは着信状況の変化で呼び出されるようにする。
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(TelephonyManager.ACTION_PHONE_STATE_CHANGED);
-        // registerReceiver(receiver, intentFilter);
-
         phoneStateListener = new MyPhoneStateListener((Vibrator) getSystemService(Context.VIBRATOR_SERVICE));
         Preferences preferences = new Preferences(this);
         preferences.load(phoneStateListener);
@@ -90,8 +80,6 @@ public class VibrationOnCallService extends IntentService {
 
     @Override
     public void onDestroy(){
-
-        // unregisterReceiver(receiver);
 
         TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         tm.listen(phoneStateListener, PhoneStateListener.LISTEN_NONE);
